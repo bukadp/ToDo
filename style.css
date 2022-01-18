@@ -1,0 +1,113 @@
+body{
+    font-family: 'Roboto', Helvetica, sans-serif;
+    display: inline-block;
+    color: #000000;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21,09px;
+    background: #E5E5E5;
+}
+
+.wraper{
+    background-color: #ffffff;
+    width: 476px;
+    height: 688px;
+    border: solid 1px #989898;
+    
+}
+.title{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+.todo__add{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+input{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border: none;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    text-decoration: inherit;
+}
+
+
+.task{
+    width: 460px;
+    height: 45px;
+    border: solid 1px #989898;
+    margin: 0px 7px;
+    border-radius: 6px;
+    line-height: normal;
+    position: relative;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+}
+
+
+/**плюсик**/
+.add__btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 20px;
+    background: url("/icons/plus.svg") no-repeat;
+  width: 18px;
+  height: 18px;
+  border: none;
+  cursor: pointer;
+    }
+/**крестик**/
+.delete__btn {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        right: 20px;
+        background: url("/icons/cross.svg") no-repeat;
+      width: 18px;
+      height: 18px;
+      border: none;
+      cursor: pointer;
+}  
+
+    
+    .todo__checkbox{
+        align-items: center;
+        position: relative;
+    }
+    
+
+.todo__checkbox-box{
+    border: solid 1px #989898;
+    margin: 12px 7px 7px 7px;
+    border-radius: 6px;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+}
+
+.todo__checkbox-input {
+    border: 1px solid #989898;
+    border-radius: 100%;
+}
+
+.todo__text {
+    display: block;
+    font-size: 15px;
+    padding-left: 12px;
+    padding-right: 45px;
+    text-align: justify;
+    margin: 12px 0;
+  }
+
+

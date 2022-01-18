@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="wraper">
+        <div class="high">
+            <div class="title">high</div>
+            <form class="todo__add" onsubmit="AddTask(this); return false;">
+                <input class="task" type="text" placeholder="Добавить важных дел">
+                <input class="add__btn" value="" type="submit" />
+            </form>
+            <div class="todo__checkbox">
+                <div class="todo__checkbox-box">
+                    <input type="checkbox" class="todo__checkbox-input">
+                        <span class="todo__text">Вот вам и супер интересная тема. Вы наверняка заметили что ваши файлы с
+                            кодом
+                            становятся все объемнее, что хочется вынести некоторые вещи куда-то за пределы основной
+                            программы.
+                        </span>
+                    <input class="delete__btn" value="" />
+                </div>
+            </div>
+        </div>
+        <div class="low">
+            <div class="title">low</div>
+            <form class="todo__add" onsubmit="AddTask(this); return false;">
+                <input class="task" type="text" placeholder="Добавить">
+                <input class="add__btn" value="" type="submit" />
+            </form>
+            <div class="todo__checkbox">
+                <div class="todo__checkbox-box">
+                    <input type="checkbox" class="todo__checkbox-input">
+                     <span class="todo__text">Посмотреть ютубчик
+                          </span>
+                    <input class="delete__btn" value=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
