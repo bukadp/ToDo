@@ -2,13 +2,21 @@
 let checkboxs = document.querySelectorAll(".todo__checkbox-input");
 let btn_deletes = document.querySelectorAll(".delete__btn");
 
-for (let checkbox of checkboxs) {
-    checkbox.addEventListener("click", ChangeStatus)
+function AddClickAction(elts, callbackFunction){
+    this.elements = elts;
+    this.callback = callbackFunction;
+    this.action = function(){
+        for (let element of this.elements) {
+            element.addEventListener("click", this.callback)
+        }
+    }
 }
 
-for (let btn_delete of btn_deletes) {
-    btn_delete.addEventListener("click", DeleteTask)
-}
+let changeStatus = new AddClickAction(checkboxs, ChangeStatus);
+let deleteTask = new AddClickAction(btn_deletes, DeleteTask);
+
+changeStatus.action();
+deleteTask.action();
 
 function ChangeStatus(){   
     if (this.checked == true){
