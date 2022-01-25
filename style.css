@@ -105,9 +105,17 @@ input{
     display: block;
     font-size: 15px;
     padding-left: 12px;
-    padding-right: 45px;
+    padding-right: 10px;
     text-align: justify;
     margin: 12px 0;
   }
-
+  .todo__text-time {
+    display: block;
+    font-size: 15px;
+    padding-left: 2px;
+    padding-right: 40px;
+    text-align: justify;
+    margin: 2px 0;
+    font-style: italic;
+  }
 

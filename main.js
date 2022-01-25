@@ -59,8 +59,11 @@ function DeleteTask(){
    this.parentElement.remove();
 }
 
+
 function initNewElement(element, newTask){
+    let addTime = new Date();
     element.querySelector('.todo__text').innerHTML = newTask; // изменить клонированный элемент
+    element.querySelector('.todo__text-time').innerHTML = addTime;
     element.querySelector('.todo__checkbox-input').checked = false; // изменить клонированный элемент
     element.style.backgroundColor = "#ffffff"
 }
