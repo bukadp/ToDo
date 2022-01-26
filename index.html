@@ -9,7 +9,7 @@
     <div class="wraper">
         <div class="high">
             <div class="title">high</div>
-            <form class="todo__add" onsubmit="AddTask(this); return false;">
+            <form class="todo__add">
                 <input class="task" type="text" placeholder="Добавить важных дел">
                 <input class="add__btn" value="" type="submit" />
             </form>
@@ -28,7 +28,7 @@
         </div>
         <div class="low">
             <div class="title">low</div>
-            <form class="todo__add" onsubmit="AddTask(this); return false;">
+            <form class="todo__add">
                 <input class="task" type="text" placeholder="Добавить">
                 <input class="add__btn" value="" type="submit" />
             </form>
@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>

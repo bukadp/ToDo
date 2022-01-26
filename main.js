@@ -1,4 +1,4 @@
-
+import { format } from './node_modules/date-fns';
 let checkboxs = document.querySelectorAll(".todo__checkbox-input");
 let btn_deletes = document.querySelectorAll(".delete__btn");
 
@@ -11,6 +11,12 @@ function AddClickAction(elts, callbackFunction){
         }
     }
 }
+
+let textTasks = document.querySelectorAll('.todo__add');
+for (let textTask of textTasks) {
+    textTask.addEventListener("submit", addTask);
+  }
+
 
 let changeStatus = new AddClickAction(checkboxs, ChangeStatus);
 let deleteTask = new AddClickAction(btn_deletes, DeleteTask);
@@ -26,10 +32,11 @@ function ChangeStatus(){
     }
 }
 
-function AddTask (element){
-   let statusElement = element.parentElement;
+function addTask (element){
+    element.preventDefault()
+    let statusElement = element.currentTarget.parentElement;
 
-    let task = element.querySelector(".task:first-child");
+    let task = element.currentTarget.querySelector(".task:first-child");
     if (task.value == ''){
         alert ("введите какой-то текст задачи")
         return false;
@@ -61,9 +68,9 @@ function DeleteTask(){
 
 
 function initNewElement(element, newTask){
-    let addTime = new Date();
+   let addTime = format(new Date(), 'MM/dd/yyyy')
     element.querySelector('.todo__text').innerHTML = newTask; // изменить клонированный элемент
-    element.querySelector('.todo__text-time').innerHTML = addTime;
+   element.querySelector('.todo__text-time').innerHTML = addTime;
     element.querySelector('.todo__checkbox-input').checked = false; // изменить клонированный элемент
     element.style.backgroundColor = "#ffffff"
 }
