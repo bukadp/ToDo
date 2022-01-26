@@ -8,15 +8,15 @@ const deleteTask = new AddClickAction(btnDeletes, DeleteTask);
 function AddClickAction(elts, callbackFunction) {
     this.elements = elts;
     this.callback = callbackFunction;
-    this.action = function() {
-        for (let element of this.elements) {
-            element.addEventListener('click', this.callback)
+    this.action = function () {
+        for (const element of this.elements) {
+            element.addEventListener('click', this.callback);
         }
     };
 }
 
 const textTasks = document.querySelectorAll('.todo__add');
-for (let textTask of textTasks) {
+for (const textTask of textTasks) {
     textTask.addEventListener('submit', addTask);
 }
 
@@ -31,7 +31,7 @@ function ChangeStatus() {
     }
 }
 
-function addTask (element) {
+function addTask(element) {
     element.preventDefault();
     const statusElement = element.currentTarget.parentElement;
     const task = element.currentTarget.querySelector('.task:first-child');
